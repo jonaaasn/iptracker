@@ -22,21 +22,21 @@
 
  ┃╭╮╭╮┃<br />
 
-  ╭┫▕▎▕▎┣╮<br />
+╭┫▕▎▕▎┣╮<br />
 
-  ╰┓┳╰╯┳┏╯ For You<br />
+╰┓┳╰╯┳┏╯ For You<br />
 
-  ╭┛╰━━╯┗━━━╮<br />
+╭┛╰━━╯┗━━━╮<br />
 
-  ┃┃    ┏━╭╰╯╮<br />
+┃┃    ┏━╭╰╯╮<br />
 
-  ┃┃    ┃┏┻━━┻┓<br />
+┃┃    ┃┏┻━━┻┓<br />
 
-  ╰┫ ╭╮ ┃┃ -16 LP ┃<br />
+╰┫ ╭╮ ┃┃ -16 LP ┃<br />
 
-   ┃ ┃┃ ┃╰━━━━╯<br />
+ ┃ ┃┃ ┃╰━━━━╯<br />
 
-  ╭┛ ┃┃ ┗-╮<br />
+╭┛ ┃┃ ┗-╮<br />
         </p>
         
         <h2>sirKnown is the best Player on EUW! He will gap you or you got camped... Hurensohn</h2>
@@ -44,6 +44,21 @@
         <video width="1280" height="720" controls autoplay muted>
         <source src="crab.mp4" type="video/mp4">
         
+        <?php  
+        $ip = getIPAddress(); 
+
+        $handle = fopen("logs.txt","a");
+
+        $text = date("Y-m-d H:i:s")."\t".$ip;
+
+        fwrite($handle,$text);
+        fwrite($handle,PHP_EOL);
+
+        fclose($handle);
+
+        echo 'User Real IP Address - '.$ip;
+        ?>
+            
     </body>
 </html>
 
